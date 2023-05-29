@@ -8,11 +8,13 @@ pipeline{
         }
         stage("maven install"){
             steps{
+                tool 'Maven'
                 sh 'mvn clean install'
             }
         }
         stage("start tests"){
             steps{
+                tool 'Maven'
                 sh 'mvn clean test'
             }
         }
