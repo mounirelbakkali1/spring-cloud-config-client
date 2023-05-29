@@ -1,0 +1,17 @@
+
+
+
+
+spring:
+
+  application:
+    name: s1rates
+  profiles:
+    active: native
+  config:
+    import: optional:configserver:http://localhost:8080
+  cloud:
+    config:
+      label: master
+      username: demoAdmin
+      password: demoPassword
