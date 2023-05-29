@@ -1,9 +1,10 @@
 
 
 
+encrypt:
+  key: APODNU3093r2rbjzxcn09u213asdhy08WRFH
 
 spring:
-
   application:
     name: s1rates
   profiles:
