@@ -6,17 +6,22 @@ pipeline{
                 echo "$GIT_BRANCH"
             }
         }
-        stage("maven install"){
-            steps{
-                tool 'maven'
-                sh 'mvn clean install'
-            }
-        }
-        stage("start tests"){
-            steps{
-                tool 'maven'
-                sh 'mvn clean test'
-            }
-        }
+            stage('Tests') {
+         agent {
+            docker { image 'maven:3-openjdk-17' }
+         }
+         steps {
+            sh("mvn clean test")
+         }
+
+           stage('Tests') {
+         agent {
+            docker { image 'maven:3-openjdk-17' }
+         }
+         steps {
+            sh("mvn clean test")
+         }
+
+        
     }
 }
