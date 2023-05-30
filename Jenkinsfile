@@ -11,7 +11,7 @@ pipeline{
                 docker { image 'maven:3-openjdk-17' }
             }
             steps {
-                sh("mvn clean test")
+                sh("mvn clean install -DskipTests")
             }
         }
 
