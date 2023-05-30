@@ -10,7 +10,7 @@ spring:
   profiles:
     active: native
   config:
-    import: optional:configserver:http://localhost:8080
+    import: optional:configserver:http://172.23.176.1:8080/
   cloud:
     config:
       label: master
