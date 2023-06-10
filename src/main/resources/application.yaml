@@ -1,8 +1,11 @@
-
-
-
 encrypt:
   key: APODNU3093r2rbjzxcn09u213asdhy08WRFH
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
 
 spring:
   application:
@@ -10,7 +13,7 @@ spring:
   profiles:
     active: native
   config:
-    import: optional:configserver:http://172.23.176.1:8080/
+    import: optional:configserver:http://youcode.ma:8080/
   cloud:
     config:
       label: master
