@@ -22,6 +22,14 @@ pipeline{
             steps {
                 sh("mvn clean test")
             }
+            post {
+                success {
+                    echo "test passed :)"
+                }
+                failure {
+                    echo "test failed :("
+                }
+            }
         }
     }
 }
